@@ -1,3 +1,63 @@
-<h1>
-  {{title}}
-</h1>
+<div class="bg-inverse nav-main" style="color:white; font-size: 13px;line-height: 35px;">
+  <div class="container">
+    สำรองที่นั่ง <i class="fa fa-phone" aria-hidden="true"></i> 081-335-1335 | L.I.N.E.: @cafedeehouse
+    <div style="float:right;">
+      <ul class="nav">
+        <li class="nav-item"><i class="fa fa-clock-o" aria-hidden="true"></i> Monday – Sunday</li>
+        <li class="nav-item">
+          <a href="https://www.facebook.com/cafedeehouse" class="nav-link" target="_blank" style="color:white;padding: 0;">
+            &nbsp;&nbsp;<i class="fa fa-facebook-square" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-toggleable-md navbar-light" [ngClass]="{'header_nav--big':!isShrunk, 'header_nav--small header_nav':isShrunk}"><!--bg-faded-->
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a id="navbar-brand-txt" class="navbar-brand text-center" style="display: none;" href="#">CAFE DEE HOUSE <small>Bangsaen</small></a>
+    <a id="navbar-brand-img" class="navbar-brand" href="#">
+      <img src="../images/logo.jpg" class="card-img-top img-fluid" style="max-width: 120px; max-height: 20%;" alt="">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 120px;">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLinkActive]="['active']" (click)="sctop()">
+          <a class="nav-link" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" (click)="sctop()">
+          <a class="nav-link" [routerLink]="['/about-us']">About Us</a>
+        </li>
+        <!--<li class="nav-item" (click)="sctop()">-->
+          <!--<a class="nav-link" [routerLink]="['/about-us']">Omakase Course</a>-->
+        <!--</li>-->
+        <!--<li class="nav-item" (click)="sctop()">-->
+          <!--<a class="nav-link" [routerLink]="['/about-us']">Ultimate Chef Creation</a>-->
+        <!--</li>-->
+        <li class="nav-item" [routerLinkActive]="['active']" (click)="sctop()">
+          <a class="nav-link" [routerLink]="['/story']">Story</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" (click)="sctop()">
+          <a class="nav-link" [routerLink]="['/reviews']">Reviews</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" (click)="sctop()">
+          <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer id="footer" class="footer solid-bg empty-footer bg-inverse" style="color:white;font-size: 12px;margin-top: 30px;">
+  <div class="container" style="padding: 6px;">
+
+    <a class="navbar-brand text-center" href="#" style="color:white;font-size: 13px;margin-top: 15px;">CAFE DEE HOUSE <p style="line-height: 3px;"><small>Bangsaen</small></p></a>
+    <span>Copyright © 2016 · All Rights Reserved · CAFE DEE HOUSE</span>
+
+  </div><!-- .wf-wrap -->
+</footer>
+<a href="#" class="scroll-top on" #scrolltop [ngClass]="{'hidden':show, 'show':!show}"></a>
